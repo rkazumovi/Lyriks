@@ -1,393 +1,178 @@
-🎵 Lyriks
+# 🎵 Lyriks
 
+A modern, Spotify-inspired music streaming web app that lets users discover trending songs, explore top artists and charts, search for music, and listen through a built-in audio player — all wrapped in a clean, responsive interface.
 
+🌐 **Live Demo:** [lyriks-music-app-site.netlify.app](https://lyriks-music-app-site.netlify.app/)
+📂 **Repository:** [github.com/rkazumovi/Lyriks](https://github.com/rkazumovi/Lyriks)
 
-Lyriks is a modern, Spotify-inspired music streaming application that enables users to discover trending songs, explore top artists and charts, search for music, and enjoy an immersive listening experience through a clean and responsive interface.
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)
+![Redux Toolkit](https://img.shields.io/badge/Redux%20Toolkit-1.8-764ABC?logo=redux&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-2-646CFF?logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3-38B2AC?logo=tailwindcss&logoColor=white)
 
+---
 
+## Overview
 
-🌐 Live Demo: https://lyriks-music-app-site.netlify.app/
+Lyriks provides a modern music discovery experience inspired by platforms like Spotify. Users can browse curated music sections, discover trending tracks, explore artists and regional charts, search for songs, and play tracks directly in the app through a persistent audio player with full playback controls.
 
-📂 Repository: https://github.com/rkazumovi/Lyriks
+All music data is sourced live from the **Shazam Core API**, with API calls managed through RTK Query for efficient caching and data fetching.
 
+## ✨ Features
 
+- 🎵 Discover trending songs and curated recommendations
+- 🌍 "Around You" — explore tracks trending by country/location
+- 📈 Top Charts — browse chart-topping hits worldwide
+- 🎤 Top Artists — explore popular artists and their discographies
+- 🔍 Search for songs and artists in real time
+- ▶️ Built-in music player with play/pause, seek bar, volume control, and track info
+- 🔁 Related songs suggestions on each track's detail page
+- 📱 Fully responsive design across desktop, tablet, and mobile
+- ⚡ Fast, dynamic content loading with loading and error states
 
-📖 Overview
+## 🏗️ Core Sections
 
+| Section | Description |
+|---|---|
+| **Discover** | Browse popular songs and new music recommendations |
+| **Around You** | Explore music trending in different regions/countries |
+| **Top Charts** | View trending songs and chart-topping hits |
+| **Top Artists** | Discover popular artists and explore their music |
+| **Search** | Search for songs, artists, and music content |
+| **Song / Artist Details** | Dedicated detail pages with related songs and artist info |
 
+## 🛠️ Built With
 
-Lyriks was built to provide a modern music discovery experience inspired by popular streaming platforms like Spotify. The application allows users to browse music categories, discover trending tracks, explore artists and charts, and search for songs through an intuitive and visually appealing interface.
+**Languages**
+- JavaScript (JSX) — application logic and components
+- CSS — styling via Tailwind CSS
+- HTML — base document markup
 
+**Frameworks / Libraries**
+- [React](https://react.dev/) 18 — UI library
+- [React Router](https://reactrouter.com/) 6 — client-side routing
+- [Redux Toolkit](https://redux-toolkit.js.org/) — global state management
+- [RTK Query](https://redux-toolkit.js.org/rtk-query/overview) — API data fetching and caching
+- [React Redux](https://react-redux.js.org/) — React bindings for Redux
+- [Axios](https://axios-http.com/) — HTTP client
+- [Swiper](https://swiperjs.com/) — touch-enabled carousels/sliders
+- [React Icons](https://react-icons.github.io/react-icons/) — icon library
+- [Tailwind CSS](https://tailwindcss.com/) — utility-first styling
 
+**External API**
+- [Shazam Core API](https://rapidapi.com/) (via RapidAPI) — music charts, search, artist, and track data
 
-The project demonstrates modern frontend development practices, API integration, state management, responsive design principles, and the ability to build scalable, data-driven applications.
+**Build Tools & Tooling**
+- [Vite](https://vitejs.dev/) — build tool and dev server
+- [PostCSS](https://postcss.org/) + [Autoprefixer](https://github.com/postcss/autoprefixer) — CSS processing
+- [ESLint](https://eslint.org/) (Airbnb config) — linting and code consistency
 
+**Deployment**
+- [Netlify](https://www.netlify.com/) — hosting and continuous deployment
 
+## 🚀 Getting Started
 
-✨ Features
+### Prerequisites
 
-🎵 Discover trending songs and albums
+- [Node.js](https://nodejs.org/) (v18 or later recommended)
+- npm or yarn
+- A [RapidAPI](https://rapidapi.com/) account with access to the Shazam Core API and a Geo API key
 
-🌍 Explore music around your location
+### Installation
 
-📈 Browse Top Charts
+1. Clone the repository
+   ```bash
+   git clone https://github.com/rkazumovi/Lyriks.git
+   cd Lyriks
+   ```
 
-🎤 Explore Top Artists
+2. Install dependencies
+   ```bash
+   npm install
+   ```
 
-🔍 Search for songs and artists
+3. Configure environment variables
 
-📱 Fully responsive design
+   Create a `.env` file in the project root based on `.env.example`:
+   ```
+   VITE_SHAZAM_CORE_RAPID_API_KEY=your_rapidapi_key
+   VITE_GEO_API_KEY=your_geo_api_key
+   ```
 
-⚡ Fast and interactive user experience
+4. Start the development server
+   ```bash
+   npm run dev
+   ```
 
-🎨 Modern Spotify-inspired interface
+5. Open your browser and navigate to `http://localhost:3000` (or the port shown in your terminal)
 
-🔄 Dynamic content loading
+### Build for Production
 
-🎧 Seamless music discovery experience
+```bash
+npm run build
+```
 
-🏗️ Core Sections
+### Preview the Production Build
 
-🎵 Discover
+```bash
+npm run preview
+```
 
+## 📁 Project Structure
 
-
-Browse popular songs and discover new music recommendations.
-
-
-
-🌍 Around You
-
-
-
-Explore music trends and discover tracks that are popular in different regions.
-
-
-
-📈 Top Charts
-
-
-
-View trending songs and chart-topping hits.
-
-
-
-🎤 Top Artists
-
-
-
-Discover popular artists and explore their music.
-
-
-
-🔍 Search
-
-
-
-Search for songs, artists, and music content through an intuitive search experience.
-
-
-
-🛠️ Technology Stack
-
-Frontend
-
-React
-
-JavaScript
-
-HTML5
-
-CSS3
-
-State Management & APIs
-
-Redux Toolkit
-
-RTK Query
-
-Music API Integration
-
-Tools & Deployment
-
-Git
-
-GitHub
-
-Netlify
-
-🎯 Project Goals
-
-
-
-This project was built to:
-
-
-
-Demonstrate modern React application development
-
-Build an API-driven music platform
-
-Practice scalable state management patterns
-
-Create a responsive and engaging user interface
-
-Improve frontend architecture and code organization
-
-Showcase real-world application development skills
-
-🏗️ Architecture
-
-
-
-Lyriks follows a component-based architecture focused on:
-
-
-
-Reusable UI components
-
-Separation of concerns
-
-API-driven data fetching
-
-Centralized state management
-
-Responsive layouts
-
-Scalable application structure
-
-Maintainable and modular code organization
-
-🚀 Getting Started
-
-Prerequisites
-
-
-
-Ensure you have installed:
-
-
-
-Node.js (v18 or later recommended)
-
-npm or yarn
-
-Git
-
-⚙️ Installation
-
-
-
-Clone the repository:
-
-
-
-git clone https://github.com/rkazumovi/Lyriks.git
-
-
-
-Navigate to the project directory:
-
-
-
-cd Lyriks
-
-
-
-Install dependencies:
-
-
-
-npm install
-
-
-
-or
-
-
-
-yarn install
-
-▶️ Running Locally
-
-
-
-Start the development server:
-
-
-
-npm run dev
-
-
-
-or
-
-
-
-yarn dev
-
-
-
-Open your browser:
-
-
-
-http://localhost:3000
-
-📁 Project Structure
-
+```
 Lyriks/
-
 ├── public/
-
 ├── src/
-
-│   ├── assets/
-
-│   ├── components/
-
-│   ├── pages/
-
+│   ├── assets/               # Static assets, constants, icons
+│   ├── components/           # Reusable UI components
+│   │   └── MusicPlayer/      # Player, controls, seek bar, volume bar
+│   ├── pages/                # Route-level pages (Discover, Search, TopCharts, etc.)
 │   ├── redux/
-
-│   ├── services/
-
-│   ├── hooks/
-
-│   ├── utils/
-
-│   └── styles/
-
-├── package.json
-
-├── README.md
-
-└── vite.config.js
-
-
-
-The exact structure may vary depending on the implementation.
-
-
-
-📱 Responsive Design
-
-
-
-The application is fully responsive and optimized for:
-
-
-
-Desktop devices
-
-Tablets
-
-Mobile devices
-
-Various screen sizes and resolutions
-
-🎓 Skills Demonstrated
-
-
-
-This project demonstrates proficiency in:
-
-
-
-React application development
-
-State management with Redux Toolkit
-
-API integration and asynchronous data fetching
-
-Component-based architecture
-
-Responsive web design
-
-Frontend performance optimization
-
-Clean and maintainable code organization
-
-Building real-world, data-driven applications
-
-💡 Learning Outcomes
-
-
-
-Through this project, I strengthened my experience in:
-
-
-
-Designing scalable frontend architectures
-
-Managing application state efficiently
-
-Building reusable components
-
-Integrating third-party APIs
-
-Handling asynchronous operations
-
-Creating engaging user experiences
-
-Developing production-ready applications
-
-🔮 Future Improvements
-
-
-
-Potential enhancements include:
-
-
-
-User authentication
-
-Personalized playlists
-
-Favorite songs and saved artists
-
-Music player controls
-
-Audio streaming functionality
-
-Recently played history
-
-Dark and light theme support
-
-Lyrics integration
-
-Recommendation engine
-
-Social sharing features
-
-Offline support
-
-Advanced filtering and categorization
-
-🤝 Contributing
-
-
+│   │   ├── features/         # Redux slices (e.g. player state)
+│   │   ├── services/         # RTK Query API service (Shazam Core)
+│   │   └── store.js          # Redux store configuration
+│   ├── App.jsx
+│   └── index.jsx
+├── .env.example
+├── tailwind.config.js
+├── postcss.config.js
+├── vite.config.js
+└── package.json
+```
+
+## 📱 Responsive Design
+
+The application is fully responsive and optimized for desktop, tablet, and mobile screen sizes.
+
+## 📦 Deployment
+
+This project is deployed with **Netlify** and is live at:
+👉 [lyriks-music-app-site.netlify.app](https://lyriks-music-app-site.netlify.app/)
+
+## 🤝 Contributing
 
 Contributions, suggestions, and improvements are welcome.
 
+1. Fork the repository
+2. Create your feature branch
+   ```bash
+   git checkout -b feature/new-feature
+   ```
+3. Commit your changes
+   ```bash
+   git commit -m "Add new feature"
+   ```
+4. Push to the branch
+   ```bash
+   git push origin feature/new-feature
+   ```
+5. Open a Pull Request
 
+## 📄 License
 
-Fork the repository
+This project is intended for educational and portfolio purposes. Music data is provided via the Shazam Core API through RapidAPI and is subject to that service's terms of use.
 
-Create your feature branch
+---
 
-git checkout -b feature/new-feature
-
-Commit your changes
-
-git commit -m "Add new feature"
-
-Push to the branch
-
-git push origin feature/new-feature
-
-Open a Pull Request
-
-
-
-⭐ If you found this project interesting, consider giving it a star on GitHub!
+<p align="center">⭐ If you found this project interesting, consider giving it a star on GitHub!</p>
